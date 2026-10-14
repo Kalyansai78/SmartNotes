@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="SmartNotes helps you create, organize, and manage your notes with ease."
+    >
+
+    <meta name="theme-color" content="#f8f9fc">
+
+    <link rel="icon" type="image/png" href="images/notes.png">
+
+    <title>SmartNotes | Your Personal Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="app-header">
+            <h1 class="app-title">
+                <img src="images/notes.png" alt="" width="40" height="40">
+                <span>SmartNotes</span>
+            </h1>
+
+            <p class="app-description">
+                Capture your thoughts, organize your ideas.
+            </p>
+        </header>
+
+        <section class="notes-section" aria-label="Your notes">
+            <div class="notes-toolbar">
+                <h2 class="section-title">My Notes</h2>
+
+                <button class="btn" id="create-note-btn" type="button">
+                    <img src="images/edit.png" alt="" width="20" height="20">
+                    <span>Create Note</span>
+                </button>
+            </div>
+
+            <div class="notes-controls">
+                <div class="search-wrapper">
+                    <label for="search-notes" class="visually-hidden">
+                        Search notes
+                    </label>
+                    <input
+                        type="search"
+                        id="search-notes"
+                        class="search-input"
+                        placeholder="Search your notes..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="category-filter-wrapper">
+                    <label for="filter-category" class="visually-hidden">
+                        Filter by category
+                    </label>
+                    <select id="filter-category" class="sort-select">
+                        <option value="all">All Categories</option>
+                        <option value="Study">Study</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Ideas">Ideas</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="sort-wrapper">
+                    <label for="sort-notes">Sort by</label>
+                    <select id="sort-notes" class="sort-select">
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                        <option value="alphabetical">A–Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="notes-container" aria-live="polite"></div>
+        </section>
+    </main>
+</body>
+</html>
